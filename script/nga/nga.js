@@ -9,6 +9,7 @@ const contentType = $.getdata($.contentType);
 const userAgent = $.getdata($.userAgent);
 const body = $.getdata($.body);
 
+$.msg(cookie);
 if (!cookie || !contentType || !userAgent || !body) {
     $.msg($.name,cookie);
     // $.msg($.name, "请更新脚本并重新获取Cookie", $.desc);
@@ -48,7 +49,7 @@ function checkin() {
                     console.log(data);
                     const result = JSON.parse(data);
                     if (result.error) {
-                        $.msg($.name, "刮墙失败", cookie);
+                        $.msg($.name, "刮墙失败", result.error.join(";"));
                     } else if (result.data) {
                         const message = result.data[0];
                         const continued = result.data[1].continued;
