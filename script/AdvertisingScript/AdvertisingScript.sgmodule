@@ -1,0 +1,43 @@
+#!name=AdvertisingScript
+#!desc=最后更新时间 2023-04-07 14:53:12
+#!author=blackmatrix7
+#!repo=https://github.com/blackmatrix7/ios_rule_script
+#!domain=5
+#!url-regex=4
+#!http-request-script=1
+#!http-response-script=24
+#!reject=11
+#!mitm=21
+#!total=66
+
+[Rule]
+DOMAIN,appcloud.zhihu.com,REJECT
+DOMAIN,appcloud2.in.zhihu.com,REJECT
+DOMAIN,crash2.zhihu.com,REJECT
+DOMAIN,mqtt.zhihu.com,REJECT
+DOMAIN,sugar.zhihu.com,REJECT
+URL-REGEX,^https?:\/\/api\.zhihu\.com\/brand\/question\/\d+/card\?,REJECT
+URL-REGEX,^https?:\/\/api\.zhihu\.com\/commercial_api\/launch_v2\?,REJECT
+URL-REGEX,^https?:\/\/api\.zhihu\.com\/commercial_api\/real_time_launch_v2\?,REJECT
+URL-REGEX,^https?:\/\/www\.zhihu\.com\/api\/v\d+\/brand\/question/\d+/card\?,REJECT
+
+
+[URL Rewrite]
+"^https?:\/\/103\.41\.167\.237" - reject
+"^https?:\/\/118\.89\.204\.198" - reject
+"^https?:\/\/2402:4e00:1200:ed00:0:9089:6dac:96b6" - reject
+"^https?:\/\/api\.zhihu\.com\/(notifications\/v\d\/count)" - reject
+"^https?:\/\/api\.zhihu\.com\/ab\/api\/v1\/products\/zhihu\/platforms\/ios\/config" - reject
+"^https?:\/\/api\.zhihu\.com\/ad-style-service\/request" - reject
+"^https?:\/\/api\.zhihu\.com\/api\/v4\/ecom_data\/config" - reject
+"^https?:\/\/api\.zhihu\.com\/commercial_api\/banners_v3\/app_topstory_banner" - reject
+"^https?:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings" - reject
+"^https?:\/\/api\.zhihu\.com\/feed\/render\/revisit\/current_reading" - reject
+"^https?:\/\/api\.zhihu\.com\/fringe\/ad" - reject
+
+
+[Script]
+爱奇艺_开屏去广告 = type=http-response,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js,pattern="^https?:\/\/(t7z|kjp)\.cupid\.iqiyi\.com\/mixer\?",requires-body=1
+美团外卖_开屏去广告 = type=http-response,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js,pattern="^https?:\/\/wmapi\.meituan\.com\/api\/v\d+\/loadInfo?",requires-body=1
+[MITM]
+hostname = %APPEND% *.cupid.iqiyi.com,api.zhihu.com,appcloud2.zhihu.com,m-cloud.zhihu.com,.meituan.com,www.zhihu.com,zhuanlan.zhihu.com
