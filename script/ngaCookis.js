@@ -7,7 +7,7 @@ const headers = {
     'Accept-Language': 'zh-cn',
     'Cookie': 'your_cookie_here'
 };
-
+alert('test')
 // 发送请求获取cookie
 $httpClient.get('https://ngabbs.com', {headers: headers}, function(error, response, data){
     if (error) {
