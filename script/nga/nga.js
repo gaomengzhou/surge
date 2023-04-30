@@ -10,7 +10,7 @@ const userAgent = $.getdata($.userAgent);
 const body = $.getdata($.body);
 
 $.msg(cookie);
-$.logErr(cookie);
+$.logErr('>>',cookie,'<<');
 if (!cookie || !contentType || !userAgent || !body) {
     $.msg($.name,cookie);
     // $.msg($.name, "请更新脚本并重新获取Cookie", $.desc);
