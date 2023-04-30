@@ -22,5 +22,6 @@
             cookieValue = decodeURIComponent(document.cookie.substring(cookieStart, cookieEnd));
         }
     }
+    $notification.post('获取cookie成功', cookieValue);
     $done({headers: {'Cookie': 'ngaPassportUid=' + cookieValue}});
 })();
