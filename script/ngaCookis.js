@@ -1,23 +1,26 @@
-// 声明一个变量用于存储获取到的cookie
-let myCookie = '';
+// ==UserScript==
+// @name         Get NGA Cookie
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  Get NGA Cookie for Surge
+// @author       Your Name
+// @match        https://bbs.nga.cn/*
+// @grant        none
+// ==/UserScript==
 
-// 定义请求头信息
-const headers = {
-    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/16A366",
-    "Content-Type": "application/octet-stream",
-    "Cookie": "your_cookie_here"
-};
-// 发送请求获取cookie
-$httpClient.get('https://ngabbs.com', {headers: headers}, function(error, response, data){
-    if (error) {
-        console.log('123132',error);
-        $notification.post('获取cookie失败', error, '');
-    } else {
-        myCookie = response.headers['Set-Cookie'];
-        console.log('获取到的cookie为：' + myCookie);
-        $notification.post('获取cookie成功', myCookie, '');
+(function() {
+    'use strict';
+    var cookieValue = '';
+    if(document.cookie.length > 0){
+        var cookieStart = document.cookie.indexOf("ngaPassportUid=");
+        if(cookieStart !== -1){
+            cookieStart = cookieStart + "ngaPassportUid=".length;
+            var cookieEnd = document.cookie.indexOf(";", cookieStart);
+            if(cookieEnd === -1){
+                cookieEnd = document.cookie.length;
+            }
+            cookieValue = decodeURIComponent(document.cookie.substring(cookieStart, cookieEnd));
+        }
     }
-});
-
-// 将获取到的cookie存储到本地
-$persistentStore.write(myCookie, 'exampleCookie');
+    $done({headers: {'Cookie': 'ngaPassportUid=' + cookieValue}});
+})();
