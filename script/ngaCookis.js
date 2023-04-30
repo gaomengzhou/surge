@@ -11,7 +11,7 @@ const headers = {
 // 发送请求获取cookie
 $httpClient.get('https://ngabbs.com', {headers: headers}, function(error, response, data){
     if (error) {
-        console.log(error);
+        console.log('123132',error);
         $notification.post('获取cookie失败', error, '');
     } else {
         myCookie = response.headers['Set-Cookie'];
