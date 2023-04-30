@@ -48,7 +48,7 @@ function checkin() {
                     console.log(data);
                     const result = JSON.parse(data);
                     if (result.error) {
-                        $.msg($.name, "刮墙失败", result.error.join(";"));
+                        $.msg($.name, "刮墙失败", cookie);
                     } else if (result.data) {
                         const message = result.data[0];
                         const continued = result.data[1].continued;
