@@ -9,10 +9,13 @@ const contentType = $.getdata($.contentType);
 const userAgent = $.getdata($.userAgent);
 const body = $.getdata($.body);
 
-$.logErr('>',cookie,'<');
-$.logErr('>>',contentType,'<<');
-$.logErr('>>>',userAgent,'<<<');
-$.logErr('>>>>',body,'<<<<');
+$.logErr(cookie);
+$.logErr('------------------')
+$.logErr(contentType);
+$.logErr('------------------')
+$.logErr(userAgent);
+$.logErr('------------------')
+$.logErr(body);
 
 if (!cookie || !contentType || !userAgent || !body) {
     $.msg($.name,cookie);
