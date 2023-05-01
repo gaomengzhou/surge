@@ -1,3 +1,7 @@
+#!name=AdvertisingScript
+#!desc=开屏去广告
+#!repo=https://raw.githubusercontent.com/gaomengzhou/surge/main/modules/AdvertisingScript/AdvertisingScript.sgmodule
+
 [Rule]
 DOMAIN,appcloud.zhihu.com,REJECT
 DOMAIN,appcloud2.in.zhihu.com,REJECT

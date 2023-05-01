@@ -1,3 +1,7 @@
+#!name=getCookie
+#!desc=获取cookie集合
+#!repo=https://raw.githubusercontent.com/gaomengzhou/surge/main/modules/cookie/getCookie.sgmodule
+
 [MITM]
 hostname = ngabbs.com,*.bilibili.com,bbs.nga.cn,ms.jr.jd.com,me-api.jd.com,api.m.jd.com,act.10010.com,m.client.10010.com,tieba.baidu.com,i.meituan.com
 
