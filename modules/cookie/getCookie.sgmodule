@@ -2,9 +2,6 @@
 #!desc=获取cookie集合
 #!repo=https://raw.githubusercontent.com/gaomengzhou/surge/main/modules/cookie/getCookie.sgmodule
 
-[MITM]
-hostname = %APPEND% ngabbs.com,*.bilibili.com,bbs.nga.cn,ms.jr.jd.com,me-api.jd.com,api.m.jd.com,act.10010.com,m.client.10010.com,tieba.baidu.com,i.meituan.com
-
 [Script]
 获取联通cookie 1 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js,type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm,requires-body=0,script-update-interval=0
 获取联通cookie 2 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js,type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign,requires-body=0,script-update-interval=0
@@ -14,3 +11,6 @@ NGA cookie = type=http-request,pattern=^https:\/\/ngabbs.com\/nuke.php\??,script
 获取贴吧cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js,type=http-request,pattern=^https?:\/\/tieba\.baidu\.com\/?.?,requires-body=0,script-update-interval=0
 获取bilibili cookie = type=http-request,pattern=^https:\/\/(www|live)\.bilibili\.com\/?.?,requires-body=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js,script-update-interval=0
 威锋网cookie = type=http-request,pattern=^https?:\/\/api.wfdata.club\/v1\/auth\/signin,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.cookie.js,requires-body=true
+
+[MITM]
+hostname = %APPEND% ngabbs.com,*.bilibili.com,bbs.nga.cn,ms.jr.jd.com,me-api.jd.com,api.m.jd.com,act.10010.com,m.client.10010.com,tieba.baidu.com,i.meituan.com
