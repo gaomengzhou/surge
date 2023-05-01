@@ -1,4 +1,4 @@
-#!name=getCookie
+#!name=GetCookie
 #!desc=获取cookie集合
 #!repo=https://raw.githubusercontent.com/gaomengzhou/surge/main/modules/cookie/getCookie.sgmodule
 
