@@ -12,13 +12,6 @@ NGA cookie = type=http-request,pattern=^https:\/\/ngabbs.com\/nuke.php\??,script
 获取bilibili cookie = type=http-request,pattern=^https:\/\/(www|live)\.bilibili\.com\/?.?,requires-body=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js
 威锋网cookie = type=http-request,pattern=^https?:\/\/api.wfdata.club\/v1\/auth\/signin,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.cookie.js,requires-body=true
 美团cookie = type=http-request,pattern=^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js,script-update-interval=0
-########################################################################################
-NGA刮墙 = type=cron,cronexp=0 10 * * *,script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.js,wake-system=1,script-update-interval=0
-威锋网签到 = type=cron,cronexp=0 10 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.js,wake-system=1,script-update-interval=0
-美团签到 = type=cron,cronexp=0 10 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js,wake-system=1,script-update-interval=0
-贴吧签到 = type=cron,cronexp=0 10 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js,script-update-interval=0
-# 联通签到 = type=cron,cronexp=0 10 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js
-bilibili签到 = type=cron,cronexp=0 10 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js,script-update-interval=0
-bilibili抽红包 = type=cron,cronexp=0 10 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/redpocket.js
+
 [MITM]
 hostname = %APPEND% ngabbs.com,*.bilibili.com,bbs.nga.cn,ms.jr.jd.com,me-api.jd.com,api.m.jd.com,act.10010.com,m.client.10010.com,tieba.baidu.com,i.meituan.com
