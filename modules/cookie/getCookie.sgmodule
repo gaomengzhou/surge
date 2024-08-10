@@ -14,4 +14,4 @@ NGA cookie = type=http-request,pattern=^https:\/\/ngabbs.com\/nuke.php\??,script
 贴吧cookie = http-request ^https?:\/\/tieba\.baidu\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js
 
 [MITM]
-hostname = %APPEND% ngabbs.com,*.bilibili.com,bbs.nga.cn,ms.jr.jd.com,me-api.jd.com,api.m.jd.com,act.10010.com,m.client.10010.com,i.meituan.com,c.tieba.baidu.com, tiebac.baidu.com
+hostname = %APPEND% ngabbs.com,*.bilibili.com,bbs.nga.cn,ms.jr.jd.com,me-api.jd.com,api.m.jd.com,act.10010.com,m.client.10010.com,i.meituan.com,tieba.baidu.com
