@@ -11,7 +11,8 @@ NGA cookie = type=http-request,pattern=^https:\/\/ngabbs.com\/nuke.php\??,script
 获取bilibili cookie = type=http-request,pattern=^https:\/\/(www|live)\.bilibili\.com\/?.?,requires-body=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js
 威锋网cookie = type=http-request,pattern=^https?:\/\/api.wfdata.club\/v1\/auth\/signin,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.cookie.js,requires-body=true
 美团cookie = type=http-request,pattern=^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js,script-update-interval=0
-贴吧cookie = http-request ^https?:\/\/tieba\.baidu\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js
-
+贴吧_获取cookie1 = type=http-request,pattern=^https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
+贴吧_获取cookie2 = type=http-request,pattern=^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
+贴吧_获取cookie3 = type=http-request,pattern=^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
 [MITM]
-hostname = %APPEND% ngabbs.com,*.bilibili.com,bbs.nga.cn,ms.jr.jd.com,me-api.jd.com,api.m.jd.com,act.10010.com,m.client.10010.com,i.meituan.com,tieba.baidu.com
+hostname = %APPEND% ngabbs.com,*.bilibili.com,bbs.nga.cn,ms.jr.jd.com,me-api.jd.com,api.m.jd.com,act.10010.com,m.client.10010.com,i.meituan.com,c.tieba.baidu.com,tiebac.baidu.com
