@@ -15,4 +15,4 @@ NGA cookie = type=http-request,pattern=^https:\/\/ngabbs.com\/nuke.php\??,script
 贴吧_获取cookie2 = type=http-request,pattern=^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
 贴吧_获取cookie3 = type=http-request,pattern=^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
 [MITM]
-hostname = %APPEND% ngabbs.com,*.bilibili.com,bbs.nga.cn,ms.jr.jd.com,me-api.jd.com,api.m.jd.com,act.10010.com,m.client.10010.com,i.meituan.com,c.tieba.baidu.com,tiebac.baidu.com
+hostname = %APPEND% ngabbs.com,*.bilibili.com,bbs.nga.cn,ms.jr.jd.com,me-api.jd.com,api.m.jd.com,act.10010.com,m.client.10010.com,i.meituan.com,c.tieba.baidu.com,tiebac.baidu.com,api.wfdata.club
